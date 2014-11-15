@@ -1,27 +1,87 @@
 {
     "user": {
-        "debug": false,
+        "debug": true,
         "delay": 0.25,
         "error_color": "D02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
+        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Circle/Circle.gutter-theme",
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
+            "annotations": {
+                "@disable": false,
+                "args": [],
+                "errors": [
+                    "FIXME"
+                ],
+                "excludes": [],
+                "warnings": [
+                    "TODO",
+                    "README"
+                ]
+            },
+            "coffee": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
             "coffeelint": {
                 "@disable": false,
                 "args": [],
                 "excludes": []
             },
-            "htmltidy": {
+            "csslint": {
+                "@disable": false,
+                "args": [],
+                "errors": "",
+                "excludes": [],
+                "ignore": "",
+                "warnings": ""
+            },
+            "haml": {
                 "@disable": false,
                 "args": [],
                 "excludes": []
             },
+            "htmltidy": {
+                "@disable": true,
+                "args": [],
+                "excludes": []
+            },
+            "jshint": {
+                "@disable": false,
+                "args": [
+                    "--config",
+                    "/Users/msyesyan/.jshintrc"
+                ],
+                "excludes": [],
+                "ignore": "App",
+                "ignore_match": [
+                    "'(?:App|moment|confirm|_)' is not defined"
+                ]
+            },
+            "json": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "strict": true
+            },
+            "jsxhint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
+            "max-line-length": 80,
             "rubocop": {
                 "@disable": false,
                 "args": [
-                    "-D"
+                    "--config",
+                    "/Users/msyesyan/.rubocop.yml"
                 ],
+                "excludes": []
+            },
+            "ruby": {
+                "@disable": false,
+                "args": [],
                 "excludes": []
             },
             "scss": {
@@ -32,8 +92,9 @@
                 "include-linter": ""
             }
         },
-        "mark_style": "outline",
+        "mark_style": "solid underline",
         "no_column_highlights_line": false,
+        "passive_warnings": false,
         "paths": {
             "linux": [],
             "osx": [],
@@ -46,7 +107,7 @@
         },
         "rc_search_limit": 3,
         "shell_timeout": 10,
-        "show_errors_on_save": false,
+        "show_errors_on_save": true,
         "show_marks_in_minimap": true,
         "syntax_map": {
             "html (django)": "html",
